@@ -21,12 +21,15 @@ void print_arguments(int argc, char *argv[])
 // print letters function defination start here
 void print_letters(char arg[])
 {
-    int i = 0;
+    int i = 0; // local variable i declared and intialize with 0 in funntion/method
 
     for (i = 0; arg[i] != '\0'; i++) {
+// for loop until argv[i] is not equal to '/0' or NULL character or rnd of array character
         char ch = arg[i];
+        // store character from arg[i] into ch variable and print it
 
-        if (can_print_it(ch)) {
+        if (can_print_it(ch)) { 
+            // store character from arg[i] into ch variable and print it
             printf("'%c' == %d ", ch, ch);
         }
     }
@@ -34,7 +37,7 @@ void print_letters(char arg[])
     printf("\n");
 }
 
-int can_print_it(char ch)
+int can_print_it(char ch)  // function defination start here this function oof type integer will return int 1 or 0 // and a character value is pass will to this funtion
 {
     return isalpha(ch) || isblank(ch);
 }
